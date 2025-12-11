@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+*.pyd
+
+venv/
+.venv/
+
+password_manager.db
