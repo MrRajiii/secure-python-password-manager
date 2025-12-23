@@ -10,7 +10,7 @@ from PyQt5.QtGui import QFont
 from config_db import ConfigDB
 from credential_manager import CredentialManager
 
-# --- MODERN UI STYLESHEET (QSS) ---
+
 STYLESHEET = """
     QMainWindow, QDialog {
         background-color: #1e1e2e;
@@ -164,13 +164,13 @@ class MainWindow(QMainWindow):
         main_layout.setContentsMargins(20, 20, 20, 20)
         main_layout.setSpacing(20)
 
-        # Header Section
+        
         header_layout = QHBoxLayout()
         title_label = QLabel("<h1>My Credentials</h1>")
         header_layout.addWidget(title_label)
         header_layout.addStretch()
 
-        # Action Buttons
+        
         self.add_button = QPushButton("+ Add")
         self.add_button.clicked.connect(self._add_credential_dialog)
 
@@ -178,7 +178,7 @@ class MainWindow(QMainWindow):
         self.edit_button.clicked.connect(self._edit_selected_credential)
 
         self.delete_button = QPushButton("Delete")
-        self.delete_button.setObjectName("delete_btn")  # Special color via QSS
+        self.delete_button.setObjectName("delete_btn")
         self.delete_button.clicked.connect(self._delete_selected_credential)
 
         self.refresh_button = QPushButton("Refresh")
