@@ -21,7 +21,7 @@ This project is designed with a strong focus on data security, using industry-st
 1.  **Key Derivation:** The Master Password is never stored directly. It is stretched using **PBKDF2 with SHA-256** and a high iteration count (**480,000+ iterations**) and a unique salt to generate a strong, 32-byte encryption key. This process makes brute-force attacks computationally infeasible.
 2.  **Authenticated Encryption:** All sensitive data (usernames, passwords) is encrypted using **AES-256 GCM** (via the Fernet specification). This method not only encrypts the data but also ensures its **integrity** (guaranteeing that the stored data has not been tampered with).
 
-## Technologies Used
+## 🛠️ Technologies Used
 
 * **Language:** Python 3.x
 * **GUI Framework:** PyQt5
