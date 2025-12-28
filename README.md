@@ -7,28 +7,28 @@
 </p>
 A robust, cross-platform desktop application for securely managing user credentials. Built with Python and PyQt5, emphasizing cryptographic best practices.
 
-## ✨ Features
+## Features
 
 * **Full CRUD Functionality:** Easily Create, Read, Update, and Delete credentials.
 * **Secure Authentication:** Uses a single Master Password to unlock the vault.
 * **Encrypted Storage:** All credentials are encrypted before being stored in an SQLite database.
 * **Professional GUI:** Built using PyQt5 for a clean, native desktop look and feel.
 
-## 🛡️ Security Architecture
+## Security Architecture
 
 This project is designed with a strong focus on data security, using industry-standard primitives from the `cryptography` library.
 
 1.  **Key Derivation:** The Master Password is never stored directly. It is stretched using **PBKDF2 with SHA-256** and a high iteration count (**480,000+ iterations**) and a unique salt to generate a strong, 32-byte encryption key. This process makes brute-force attacks computationally infeasible.
 2.  **Authenticated Encryption:** All sensitive data (usernames, passwords) is encrypted using **AES-256 GCM** (via the Fernet specification). This method not only encrypts the data but also ensures its **integrity** (guaranteeing that the stored data has not been tampered with).
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 * **Language:** Python 3.x
 * **GUI Framework:** PyQt5
 * **Database:** SQLite3
 * **Cryptography:** `cryptography` library (PBKDF2, Fernet/AES-256 GCM)
 
-## 💻 Installation and Setup
+## Installation and Setup
 
 1.  **Clone the Repository:**
     ```bash
